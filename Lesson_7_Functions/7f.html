@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7f</title>
+  </head>
+  <body>
+    <script>
+      function convertToFahrenheit(degrees) {
+        return degrees * 9 / 5 + 32;
+      }
+
+      function convertToCelsius(degrees) {
+        return (degrees - 32) * 5/9;
+      }
+      
+      function convertTemperature(degrees, unit) {
+        let result = '';
+
+        if (unit === 'C') {
+          result = convertToFahrenheit(degrees);
+          return `${result}F`
+        }  
+
+        result = convertToCelsius(degrees);
+        return `${result}C`
+      }
+      
+      console.log(convertTemperature(25, 'C'));
+      console.log(convertTemperature(86, 'F'));
+    </script>
+  </body>
+</html>
