@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>[]
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const nathan = {
+        name: 'nathan',
+        breed: 'beagle',
+        color: 'brown',
+        gender: 'male',
+        bark() {
+          console.log('WOOOOOO');
+        },
+        eat(food) {
+          console.log(`Yummy ${food}`)
+        }
+      }
+
+      const niki = {
+        name: 'niki',
+        breed: 'aspin',
+        color: 'white',
+        gender: 'female',
+        bark() {
+          console.log('WOOOWOOWOO');
+        },
+        eat(food) {
+          console.log(`Yummy ${food}`)
+        }
+      }
+
+      const lucas = {
+        name: 'lucas',
+        breed: 'aspin mix',
+        color: 'brown',
+        gender: 'male',
+        parents: {
+          mother: niki,
+          father: nathan
+        },
+        bark() {
+          console.log('AROOOOOOO');
+        },
+        eat(food) {
+          console.log(`Yummy ${food}`)
+        }
+      }
+
+
+      
+      console.log(lucas.name);
+      console.log(lucas.bark());
+      console.log(lucas.eat('banana'));
+      console.log(lucas.parents.mother.name);
+      console.log(lucas.parents.father.eat('tinapay'));
+      console.log(JSON.stringify(lucas))
+      lucas.eat('banana');
+    </script>
+  </body>
+</html>
