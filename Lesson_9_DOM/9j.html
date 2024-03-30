@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+</head>
+
+<body>
+  <p>
+    <button onclick="updateCalculation('1');">
+      1
+    </button>
+    <button onclick="updateCalculation('2');">
+      2
+    </button>
+    <button onclick="updateCalculation('3');">
+      3
+    </button>
+    <button onclick="updateCalculation('+');">
+      +
+    </button>
+  </p>
+
+  <p>
+    <button onclick="updateCalculation('4');">
+      4
+    </button>
+    <button onclick="updateCalculation('5');">
+      5
+    </button>
+    <button onclick="updateCalculation('6');">
+      6
+    </button>
+    <button onclick="updateCalculation('-');">
+      -
+    </button>
+  </p>
+
+  <p>
+    <button onclick="updateCalculation('7');">
+      7
+    </button>
+    <button onclick="updateCalculation('8');">
+      8
+    </button>
+    <button onclick="updateCalculation('9');">
+      9
+    </button>
+    <button onclick="updateCalculation('*');">
+      *
+    </button>
+  </p>
+
+  <p>
+    <button onclick="updateCalculation('0');">
+      0
+    </button>
+    <button onclick="updateCalculation('.');">
+      .
+    </button>
+    <button onclick="evaluateCalculation()">
+      =
+    </button>
+    <button onclick="updateCalculation('/');">
+      /
+    </button>
+  </p>
+
+  <p>
+    <button onclick=" clearCalculation();">
+      Clear
+    </button>
+  </p>
+
+  <p class="js-output"></p>
+
+  <script>
+    let calculation;
+    loadCalculation();
+
+    function loadCalculation() {
+      calculation = localStorage.getItem("calculation");
+
+      if (!calculation) {
+        calculation = ""
+      } else {
+        showCalculation();
+      }
+    }
+
+    function showCalculation() {
+      const displayElement = document.querySelector('.js-output');
+      displayElement.innerHTML = calculation;
+    }
+
+    function saveCalculation() {
+      localStorage.setItem("calculation", calculation)
+    }
+
+    function updateCalculation(character) {
+      calculation += character;
+      saveCalculation();
+      showCalculation();
+    }
+
+    function clearCalculation() {
+      calculation = '';
+      saveCalculation();
+      showCalculation();
+    }
+
+    function evaluateCalculation() {
+      calculation = eval(calculation);
+      saveCalculation();
+      showCalculation();
+    }
+  </script>
+</body>
+
+</html>

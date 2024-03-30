@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9h</title>
+  </head>
+  <body>
+    <input 
+      class="js-input" 
+      placeholder="Type something"
+      onkeyup="onKeyUp(event);"
+      >
+
+    <p class="js-output"></p>
+    
+    <script>
+      function display() {
+        const inputElement = document.querySelector('.js-input');
+        const outputElement = document.querySelector('.js-output');
+        
+        outputElement.innerHTML = inputElement.value;
+      }
+
+      function onKeyUp(event) {
+        display()
+      }
+
+      // OG version
+      // function onKeyUp(event) {
+      //   const inputElement = document.querySelector('.js-input');
+      //   const value = inputElement.value;
+      
+      //   document.querySelector('.js-output')
+      //     .innerHTML = value;
+      // }
+    </script>
+  </body>
+</html>
