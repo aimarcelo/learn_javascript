@@ -47,9 +47,41 @@
       return positiveCount
     }
 
-    console.log(countPositive([-1, 0, 2, 3, 6, 100, -10]));
-    console.log(countPositive([-2, 3, -5, 7, 10]));
+    // 11k using filter
+    // function removeNegative(value) {
+    //   if(value > -1) {
+    //     return true
+    //   }
+    //   return false;
+    // }
 
+    // function countPositive(nums) {
+    //   return nums.filter(removeNegative).length;
+    // }
+    // countPositive([-1, -2, 2]); // Outputs 1
+
+
+    // ----------------------------------------------------------------
+
+
+    // 11k filter counterpart
+    // function countPositive(nums) {
+    //   const positiveNumbers = []
+    //   let tempValue;
+    //
+    //   for (i = 0; i < nums.length; i++) {
+    //     tempValue = nums[i]
+    //
+    //     if (tempValue > 0) {
+    //       positiveNumbers.push(tempValue);
+    //     } 
+    //   }
+    //
+    //   return positiveNumbers.length
+    // }    
+
+    // console.log(countPositive([-1, 0, 2, 3, 6, 100, -10]));
+    // console.log(countPositive([-2, 3, -5, 7, 10]));
   </script>
 </body>
 

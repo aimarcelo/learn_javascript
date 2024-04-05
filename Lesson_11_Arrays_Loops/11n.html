@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>11n</title>
+
+</head>
+
+<body>
+  <script>
+    function countWords(words) {
+      const wordCounts = {};
+
+      let fruitName;
+
+      // initialize values to 0
+      for (i = 0; i < words.length; i++) {
+        fruitName = words[i];
+        // use bracket notation instead of dot notation to assign dynamic property
+        wordCounts[fruitName] = 0;
+      }
+
+      for (i = 0; i < words.length; i++) {
+        fruitName = words[i];
+        wordCounts[fruitName] += 1;
+        // same as wordCounts[fruitName] = wordCounts[fruitName] + 1
+      }
+      
+      return wordCounts;
+    }
+
+    console.log(countWords([]));
+
+    console.log(countWords(['apple'])); 
+    // {apple: 1}
+
+    console.log(countWords(['banana'])); 
+    //{banana: 1}
+
+    console.log(countWords(['apple', 'banana'])); 
+    //{apple: 1, banana: 1}
+
+    console.log(countWords(['apple', 'apple', 'banana'])); 
+    //{apple: 2, banana: 1}
+    
+    console.log(countWords(['apple', 'banana', 'apple'])); 
+    //{apple: 2, banana: 1}
+
+    console.log(countWords(['apple', 'banana', 'apple', 'pear', 'kiwi', 'pear'])); 
+    //{apple: 2, banana: 1}
+
+  </script>
+</body>
+
+</html>
+

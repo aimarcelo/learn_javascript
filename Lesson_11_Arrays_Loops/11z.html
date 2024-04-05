@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>11z</title>
+
+</head>
+
+<body>
+  <script>
+    function getRiders(queue, limit) {
+      const riders = [];
+      let count = 0;
+      let personCount;
+
+      for (i = 0; i < queue.length; i++) {
+        personCount = queue[i];
+
+        if (count + personCount <= limit) {
+          riders.push(personCount);
+          count = count + personCount;
+        } else { 
+          console.log(count);
+          return riders;
+        }
+      } 
+  
+    }
+
+    console.log(getRiders([4, 7, 3, 4, 3, 7, 4, 2], 20))
+    console.log(getRiders([40, 7, 3, 4, 3, 7, 4, 2], 20))
+    
+  </script>
+</body>
+</html>
+
+
+

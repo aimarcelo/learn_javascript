@@ -21,17 +21,100 @@
     getLastValue();
 
     //11c
-    function arraySwap() {
-      let dogs = ['Nathan', 'Niki', 'Lucas', 'Pancho', 'Maxine'];
+    function arraySwap(dogs) {
       const firstValue = dogs[0];
       dogs[0] = dogs[dogs.length - 1];
       dogs[dogs.length - 1] = firstValue;
 
-      console.log(dogs);
+      return dogs
     }
 
-    arraySwap();
+    const something = arraySwap(['Nathan', 'Niki', 'Lucas', 'Pancho', 'Maxine'])
+    console.log(something);
+
+
+    // Pure function - does not alter parameter
+    function addOne(numbers) {
+      const newArray = [];
+
+      for (i = 0;i < numbers.length; i++) {
+        newArray.push(numbers[i] + 1);
+      }
+      return newArray;
+    }
+
+    a = [1,2,3]
+    b = addOne(a);
+    console.log(a)
+    console.log(b)
+
+    // Mutating function - may cause side effects
+    function addOne(numbers) {
+      for (i = 0;i < numbers.length; i++) {
+        numbers[i] += 1;
+      }
+      return numbers
+    }
+
+    a = [1,2,3]
+    b = addOne(a);
+    console.log(a)
+    console.log(b)
+
+    // -------------------------------
+
+    function addOne(numbers) {
+      for (i = 0;i < numbers.length; i++) {
+        numbers[i] += 1;
+      }
+    }
+
+    a = [1,2,3]
+    addOne(a);
+    console.log(a)
+
+    // -------------------------------
+
+    function addOne(obj) {
+      obj.num += 1;
+      return obj;
+    }
+
+    data1 = { num: 1 }
+    data2 = addOne(data1)
     
+    console.log(data1)
+    console.log(data2)
+
+    // -------------------------------
+
+    function addOne(obj) {
+      // return { num: obj.num + 1 } ----> shortcut
+
+      const newObj = {
+        num: obj.num + 1
+      }
+      return newObj;
+    }
+
+    data1 = { num: 1 }
+    data2 = addOne(data1)
+    
+    console.log(data1)
+    console.log(data2)
+
+    // Primitive datatypes are pass by value
+    function addOne(x) {
+      x = x + 1;
+      return x
+    }
+
+    a = 1;
+    b = addOne(a)
+
+    console.log(a)
+    console.log(b)
+
    </script>
   </body>
 </html>
