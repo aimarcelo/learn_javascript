@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11a-11c</title>
+  </head>
+  <body>
+   <script>
+    //11a
+    const nums = [10, 20, 30];
+    nums[2] = 99;
+
+    console.log(nums);
+
+    //11b
+    function getLastValue() {
+      const dogs = ['Nathan', 'Niki', 'Lucas', 'Pancho', 'Maxine'];
+      const getLastValue = dogs[dogs.length - 1];
+      console.log(getLastValue);
+    } 
+
+    getLastValue();
+
+    //11c
+    function arraySwap() {
+      let dogs = ['Nathan', 'Niki', 'Lucas', 'Pancho', 'Maxine'];
+      const firstValue = dogs[0];
+      dogs[0] = dogs[dogs.length - 1];
+      dogs[dogs.length - 1] = firstValue;
+
+      console.log(dogs);
+    }
+
+    arraySwap();
+    
+   </script>
+  </body>
+</html>
