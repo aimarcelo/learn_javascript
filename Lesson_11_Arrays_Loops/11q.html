@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>11q</title>
+
+</head>
+
+<body>
+  <script>
+    function findIndex(array, word) {
+      const result = 0;
+      let resultIndex = -1
+
+      for (i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          resultIndex = i;
+          return resultIndex;
+        } 
+      } 
+      return resultIndex;
+    }
+   
+    console.log(findIndex(['Lucas', 'Pancho', 'Maxine', 'Niki', 'Nathan'], 'Nathan'))
+
+    console.log(findIndex(['Lucas', 'Pancho', 'Maxine', 'Niki'], 'Nathan'))
+
+    console.log(findIndex(['Lucas', 'Pancho', 'Maxine', 'Niki'], 'Lucas'))
+
+    console.log(findIndex(['Pancho', 'Maxine', 'Niki', 'Nathan'], 'Lucas'))
+
+  </script>
+</body>
+
+</html>
+
