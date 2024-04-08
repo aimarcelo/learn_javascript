@@ -63,7 +63,7 @@
     //   const value = todoList[index];
     //   console.log(value);
     // }
-
+      /*
     //Accumulator pattern
     const nums = [1, 1, 3];
 
@@ -84,6 +84,60 @@
     }
 
     console.log(numsDoubled);
+    */
+
+    const array1 = [1, 2, 3];
+    const array2 = array1.slice();
+    array2.push(4);
+    console.log(array1);
+    console.log(array2);
+
+    // destructuring (shortcut) - getting the values inside the array 
+    const [firstValue, secondValue] = [1, 2, 3];
+
+    //loops: break and continue
+      // continue: skips an iteration
+    for (let  i = 0; i <=10; i++) {
+      if (i % 3 === 0) {  // to check if number is divisible by 3, then skips that value
+        continue;
+      }
+      //break: stops the loop
+      console.log(i);
+      if (i === 8) {
+        break;
+      }
+    }
+
+    let i = 1;
+
+    while (i <= 10) {
+      if (i % 3 === 0) { // you want to not count the numbers divisible by 3  
+        i++; // always put t he increment step manually, before continue
+        continue;
+      }
+      console.log(i);
+      i++; 
+    }
+
+    // wrapping a loop around a function
+    function doubleArray(nums) { 
+      const numsDoubled = []; 
+
+      for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        if (num === 0) { // if we see 0, stop the loop early
+          return numsDoubled; // a return statement can also be used to stop the loop
+        } 
+        numsDoubled.push(num * 2);
+      }
+
+      return numsDoubled;
+    }
+    console.log(doubleArray([1, 1, 3]));
+    
+    console.log(doubleArray([2, 2, 5, 5, 0, 5]));
+
+
    </script>
   </body>
 </html>
