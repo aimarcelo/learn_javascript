@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>11w</title>
+</head>
+
+<body>
+  <script>
+   function findIndex(array, word) {
+      let resultIndex = -1
+
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          resultIndex = i;
+          return resultIndex;
+        } 
+      } 
+      return resultIndex;
+    }
+
+   function unique(array) {
+    const finalArray = [];
+    
+    for (let i = 0; i < array.length; i++) {
+      if (findIndex(finalArray, array[i]) === -1) {
+        finalArray.push(array[i]);
+      } 
+    } 
+    return finalArray;
+   }
+   console.log(unique(['red', 'green', 'red', 'blue']))
+   console.log(unique(['Nathan', 'Niki', 'Nathan', 'Nathan']))
+  </script>
+</body>
+
+</html>
