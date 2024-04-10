@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>12c-12d</title>
+  <button 
+    class="js-button"
+    onclick="changeButton();"
+  >
+    Start
+  </button>
+</head>
+
+<body>
+  <script>
+    // //12c
+    // function changeButton() {
+    //   setTimeout(() => {
+    //     document.querySelector('.js-button').
+    //       innerHTML = 'Finished!'
+    //   }, 1000) 
+    // }
+
+    // 12d
+    function changeButton() {
+      document.querySelector('.js-button').innerHTML = 'Loading...'
+      setTimeout(() => {
+        document.querySelector('.js-button').
+          innerHTML = 'Finished!'
+      }, 1000) 
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Advanced Functions</title>
+
+</head>
+
+<body>
+  <script>
+    /*
+    function greeting() {
+      console.log('hello');
+    }
+
+    greeting();
+
+    const num = 2;
+    const function1 = function greeting() {
+      console.log('hello2');
+    };
+
+    console.log(function1);
+    console.log(typeof function1);
+    function1();
+
+    // saving function in an object
+
+    const object1 = {
+      num: 2, 
+      fun: function greeting() {
+        console.log('hello3');
+      }
+    };  
+    object1.fun(); // calling the function inside an object
+
+    // Passing a value in a function
+
+    function display(param) {
+      console.log(param);
+    }
+    display(2);
+
+    // Passing a function in side a function 
+
+    function run(param) {
+      param();
+    }
+
+    run(function() {
+      console.log('hello4');
+    })
+
+    */
+
+    //Asynchronous code
+    // setTimeout(function () {
+    //   console.log('timeout');
+    //   console.log('timeout2')
+    // }, 3000);
+    
+    /*
+    //another way of writing functions - "arrow notation"
+    setTimeout(() => {
+      console.log('timeout');
+      console.log('timeout2')
+    }, 3000);
+
+    console.log('next line')
+
+    setInterval(() => {
+      console.log('interval');
+    }, 3000)
+
+    console.log('next line 2');
+    */
+
+    [
+      'make dinner', 
+      'wash dishes',
+      'watch Youtube'
+    ].forEach(function(value, index) {
+      if (value === 'wash dishes') {
+        return;
+      }
+      console.log(index); 
+      console.log(value);
+    });
+
+
+
+
+
+  </script>
+</body>
+
+</html>

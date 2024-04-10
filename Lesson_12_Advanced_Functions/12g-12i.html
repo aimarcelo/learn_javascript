@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>App</title>
+
+  <button onclick="addMessage()">
+    Add
+  </button>
+  <button onclick="removeMessage()">
+    Remove
+  </button>
+</head>
+
+<body>
+
+  <script>
+    //12 g
+    /*
+    const originalTitle = '12g';
+
+    document.title = originalTitle;
+
+    setInterval(() => {
+      if (document.title === originalTitle) {
+        document.title = '(2) New messages'
+      } else {
+        document.title = originalTitle;
+      }
+    }, 1000)
+    */
+
+    // 12h
+    /*
+    const originalTitle = '12g';
+    let messages = 2;
+
+    document.title = originalTitle;
+
+    setInterval(() => {
+      if (document.title === originalTitle) {
+        document.title = `(${messages}) New messages`
+      } else {
+        document.title = originalTitle;
+      }
+    }, 1000)
+    */
+
+    //12i
+    let originalTitle = 'App';
+    let messages = 0;
+    let intervalId;
+
+    document.title = originalTitle;
+
+    enableChangingTitle();
+
+    function enableChangingTitle() {
+      clearInterval(intervalId);
+      if (messages === 0) {
+        return;
+      }
+
+      intervalId = setInterval(() => {
+        if (document.title === originalTitle) {
+          document.title = `(${messages}) New messages`
+        } else {
+          document.title = originalTitle;
+        }
+      }, 1000)
+    }
+
+    function addMessage() {
+      messages += 1;
+      enableChangingTitle()
+    }
+
+    function removeMessage() {
+      if (messages > 0) {
+        messages -= 1
+      }
+      if (messages === 0) {
+        clearInterval(intervalId);
+        document.title = originalTitle;
+      }
+    }
+
+  </script>
+</body>
+
+</html>

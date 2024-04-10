@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>12e-12f</title>
+  <button class="js-button" onclick="displayMessage()">
+    Add to cart
+  </button>
+  <div class="js-message">
+  </div>
+
+  <style>
+    .js-button {
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // 12e
+    /*
+    function displayMessage() {
+      document.querySelector('.js-message')
+        .innerHTML = 'Added'
+
+      setTimeout(function () {
+        document.querySelector('.js-message')
+          .innerHTML = '';
+      }, 2000)
+    }
+    */
+
+    //12f
+    let timeoutId;
+   
+    function displayMessage() {
+     
+      clearTimeout(timeoutId)
+     
+      document.querySelector('.js-message')
+        .innerHTML = 'Added'
+
+      timeoutId = setTimeout(() => {
+        document.querySelector('.js-message')
+          .innerHTML = '';
+      }, 2000)
+    }
+
+  </script>
+</body>
+
+</html>
