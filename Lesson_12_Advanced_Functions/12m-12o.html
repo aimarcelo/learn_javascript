@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>12m-12o</title>
+</head>
+
+<body>
+  <script>
+    // 12m
+    const addNum = (array, num) => {
+      return array.map((value, index) => value + num);
+    }
+    console.log(addNum([1, 2, 3], 2));
+
+    // 12n 
+    function removeEgg(foods) {
+      return foods.filter((food) => food !== 'egg')
+    }
+
+    console.log(removeEgg(['egg', 'tomato', 'egg', 'bacon', 'ham']))
+    console.log(removeEgg(['lettuce', 'cheese', 'egg']))
+
+    // 12o
+
+    function removeEgg2(foods) {
+     let eggCount = 0;
+
+     return foods.filter((food) => {
+        if (food !== 'egg') {
+          return true;
+        } 
+        eggCount++;
+        return eggCount > 2
+      })
+      
+    }
+    console.log(removeEgg2(['egg', 'tomato', 'egg', 'bacon', 'ham', 'egg']))
+    console.log(removeEgg2(['tomato', 'egg', 'bacon', 'egg', 'ham', 'egg', 'egg']))
+
+  </script>
+</body>
+
+</html>
