@@ -4,10 +4,10 @@
 <head>
   <title>App</title>
 
-  <button onclick="addMessage()">
+  <button class="js-add-button">
     Add
   </button>
-  <button onclick="removeMessage()">
+  <button class="js-remove-button">
     Remove
   </button>
 </head>
@@ -15,6 +15,13 @@
 <body>
 
   <script>
+    document.querySelector('.js-add-button').addEventListener('click', () => {
+      addMessage();
+    })
+
+    document.querySelector('.js-remove-button').addEventListener('click', () => {
+      removeMessage();
+    })
     //12 g
     /*
     const originalTitle = '12g';

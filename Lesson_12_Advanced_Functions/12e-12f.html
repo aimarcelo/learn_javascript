@@ -3,7 +3,7 @@
 
 <head>
   <title>12e-12f</title>
-  <button class="js-button" onclick="displayMessage()">
+  <button class="js-button">
     Add to cart
   </button>
   <div class="js-message">
@@ -18,13 +18,18 @@
 
 <body>
   <script>
+
+    document.querySelector('.js-button').addEventListener('click', () => {
+      displayMessage();
+    });
+
     // 12e
     /*
     function displayMessage() {
       document.querySelector('.js-message')
         .innerHTML = 'Added'
 
-      setTimeout(function () {
+      setTimeout(() => {
         document.querySelector('.js-message')
           .innerHTML = '';
       }, 2000)
@@ -33,11 +38,11 @@
 
     //12f
     let timeoutId;
-   
+
     function displayMessage() {
-     
+
       clearTimeout(timeoutId)
-     
+
       document.querySelector('.js-message')
         .innerHTML = 'Added'
 
